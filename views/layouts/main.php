@@ -49,7 +49,7 @@ LtAppAsset::register($this);
                                                 <ul class="list-style-none">
                                                     <li><a href="#">EN</a></li>
                                                     <li><a href="#">DE1</a></li>
-                                                    <li><a href="#">VI</a></li>
+                                                    <li><a href="#">VI2</a></li>
                                                 </ul>
                                             </div>
                                         </div><!-- End / dropdown -->
