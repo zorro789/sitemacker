@@ -47,7 +47,7 @@ LtAppAsset::register($this);
                                         <div class="dropdown" data-init="dropdown"><a class="dropdown__toggle" href="javascript:void(0)">EN <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <div class="dropdown__content" data-position="right">
                                                 <ul class="list-style-none">
-                                                    <li><a href="#">EN1</a></li>
+                                                    <li><a href="#">EN</a></li>
                                                     <li><a href="#">DE</a></li>
                                                     <li><a href="#">VI</a></li>
                                                 </ul>
