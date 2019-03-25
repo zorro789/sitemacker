@@ -212,7 +212,7 @@ LtAppAsset::register($this);
                 </section>
                 <!-- End / Section -->
                 
-                
+                <?= $content ?>
                 <!-- Section -->
                 <section class="md-section" style="background-color:#f7f7f7;padding-top:0;">
                     <div class="container">
