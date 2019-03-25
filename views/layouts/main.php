@@ -120,14 +120,14 @@ LtAppAsset::register($this);
                 <div class="slider">
                     
                     <!-- carousel__element owl-carousel -->
-                    <div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 3000}'>
+                    <div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 9000}'>
                         <div class="slider__item" style="background-image: url('web/img/slider.jpg');">
                             <div class="md-tb">
                                 <div class="md-tb__cell">
                                     <div class="slider__content">
                                         <div class="container">
-                                            <h2>We provide free template</h2>
-                                            <p>A Bootstrap 4 Responsive multi-purpose Theme for the Business, Web agency and more!</p>
+                                            <h2>Сайт-визитка за 150 рублей</h2>
+                                            <p>будет содержать практически все опции типового сайта.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -138,13 +138,14 @@ LtAppAsset::register($this);
                                 <div class="md-tb__cell">
                                     <div class="slider__content">
                                         <div class="container">
-                                            <h2>We create the trend</h2>
-                                            <p>Curabitur elementum urna augue, eu porta purus gravida in. Cras consectetur, lorem a cursus vestibulum, ligula purus iaculis nulla, in dignissim risus turpis id justo. Sed eleifend ante et ligula elei</p>
+                                            <h2>Лендинг пейдж (Landing Page) за 150 рублей</h2>
+                                            <p>позволит обеспечить полноценное продвижение ваших товаров в сети.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div><!-- End / carousel__element owl-carousel -->
                     
                 </div><!-- End / slider -->
@@ -162,8 +163,9 @@ LtAppAsset::register($this);
                                     <div class="textbox">
                                         <div class="textbox__image"><a href="#"><img src="web/img/services/4.jpg" alt=""/></a></div>
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">Free template</a></h2>
-                                            <div class="textbox__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet ut lacus a tincidunt. Quisque lu</div>
+                                            <h2 class="textbox__title"><a href="#">Сайт-визитка</a></h2>
+                                            <div class="textbox__description">Сайт-визитка ­– интернет-ресурс, который позволяет представить в сети Интернет информацию о себе, своем бизнесе, месте и времени его работы.
+Как правило, подобный сайт состоит из одной или нескольких страниц.</div>
                                         </div>
                                     </div><!-- End / textbox -->
                                     
@@ -174,8 +176,9 @@ LtAppAsset::register($this);
                                     <div class="textbox">
                                         <div class="textbox__image"><a href="#"><img src="web/img/services/5.jpg" alt=""/></a></div>
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">Responsive Layout</a></h2>
-                                            <div class="textbox__description">Nam elit ligula, egestas et ornare non, viverra eu justo. Aliquam ornare lectus ut pharetra dictum. </div>
+                                            <h2 class="textbox__title"><a href="#">Лендинг пейдж</a></h2>
+                                            <div class="textbox__description">Landing Page (посадочная страница) – интернет-ресурс, который позволяет стимулировать посетителей к приобретению того или иного товара.
+Как правило, подобный сайт состоит из одной страницы. </div>
                                         </div>
                                     </div><!-- End / textbox -->
                                     
@@ -186,8 +189,8 @@ LtAppAsset::register($this);
                                     <div class="textbox">
                                         <div class="textbox__image"><a href="#"><img src="web/img/services/6.jpg" alt=""/></a></div>
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">SEO Optimized</a></h2>
-                                            <div class="textbox__description">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
+                                            <h2 class="textbox__title"><a href="#">Сайт-каталог</a></h2>
+                                            <div class="textbox__description">Сайт-каталог – интернет-ресурс, который позволяет разместить на сайте каталог товаров с фотографиями, краткой либо полной информацией о них, рейтингом, ценой, акционными предложениями и т.д.</div>
                                         </div>
                                     </div><!-- End / textbox -->
                                     
