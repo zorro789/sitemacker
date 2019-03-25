@@ -145,7 +145,18 @@ LtAppAsset::register($this);
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="slider__item" style="background-image: url('https://picsum.photos/1920/1080');">
+                            <div class="md-tb">
+                                <div class="md-tb__cell">
+                                    <div class="slider__content">
+                                        <div class="container">
+                                            <h2>Сайт-каталог за 300 рублей</h2>
+                                            <p>даст возможность создать интернет-магазин для повышения объема продаж Вашей продукции.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div><!-- End / carousel__element owl-carousel -->
                     
                 </div><!-- End / slider -->
