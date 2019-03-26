@@ -26,8 +26,8 @@ class Texts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id'], 'integer'],
+            [['title'], 'string'],
+            [['title'], 'required'],
             [['content'], 'string'],
         ];
     }
@@ -39,6 +39,7 @@ class Texts extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'title' => 'Title',
             'content' => 'Content',
         ];
     }
