@@ -37,7 +37,7 @@ LtAppAsset::register($this);
         <div class="page-wrap">
             
             <!-- header -->
-            <header class="header header__style-02">
+            <header class="header header__style-02" style="background-color: antiquewhite;">
                 <div class="container">
                     <div class="header__logo"><a href="index.html"><img src="web/img/logo.png" alt=""/></a></div>
                     <div class="header__toogleGroup">
@@ -70,7 +70,7 @@ LtAppAsset::register($this);
             </header><!-- End / header -->
             
             <!-- Content-->
-            <div class="md-content" style="height: 900px; text-align: center; margin-left: 30px;">
+            <div class="md-content" style="height: 900px; text-align: center; margin-left: 30px; margin-right: 60px;">
            
                 <?= $content ?>
                

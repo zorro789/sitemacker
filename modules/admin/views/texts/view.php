@@ -6,11 +6,11 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Texts */
 
-$this->title = $model->id;
+$this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Texts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="texts-view">
+<div class="texts-view" style="margin-top: 110px;">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

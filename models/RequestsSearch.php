@@ -19,8 +19,8 @@ class RequestsSearch extends Requests
     {
         return [
             [['id'], 'integer'],
-            [['title'], 'string', 'required'],
-            [['content', 'email', 'tel'], 'safe', 'required'],
+            [['title'], 'string'],
+            [['content', 'email', 'tel'], 'safe'],
         ];
     }
 

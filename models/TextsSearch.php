@@ -19,8 +19,8 @@ class TextsSearch extends Texts
     {
         return [
             [['id'], 'integer'],
-            [['title'], 'string', 'required'],
-            [['content'], 'safe', 'required'],
+            [['title'], 'string'],
+            [['content'], 'safe'],
         ];
     }
 

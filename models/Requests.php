@@ -30,7 +30,7 @@ class Requests extends \yii\db\ActiveRecord
         return [
             [['title'], 'string'],
             [['title'], 'required'],
-            [['content', 'email', 'tel'], 'string'],
+            [['title','content', 'email', 'tel'], 'string'],
         ];
     }
 
