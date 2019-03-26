@@ -28,8 +28,8 @@ class Requests extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'content', 'email', 'tel'], 'required'],
-            [['id'], 'integer'],
+            [['title'], 'string'],
+            [['title'], 'required'],
             [['content', 'email', 'tel'], 'string'],
         ];
     }
@@ -41,6 +41,7 @@ class Requests extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'title' => 'Title',
             'content' => 'Content',
             'email' => 'Email',
             'tel' => 'Tel',

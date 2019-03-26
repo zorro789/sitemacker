@@ -20,7 +20,7 @@ class TextsSearch extends Texts
         return [
             [['id'], 'integer'],
             [['title'], 'string', 'required'],
-            [['content'], 'safe'],
+            [['content'], 'safe', 'required'],
         ];
     }
 
@@ -63,8 +63,8 @@ class TextsSearch extends Texts
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title]);
-        $query->andFilterWhere(['like', 'content', $this->content]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+        ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

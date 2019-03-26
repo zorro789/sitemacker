@@ -19,7 +19,8 @@ class RequestsSearch extends Requests
     {
         return [
             [['id'], 'integer'],
-            [['content', 'email', 'tel'], 'safe'],
+            [['title'], 'string', 'required'],
+            [['content', 'email', 'tel'], 'safe', 'required'],
         ];
     }
 
@@ -63,6 +64,7 @@ class RequestsSearch extends Requests
         ]);
 
         $query->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'tel', $this->tel]);
 
