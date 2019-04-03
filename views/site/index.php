@@ -107,70 +107,47 @@ $this->title = 'My Yii Application';
                 <section class="md-section" style="background-color:#f7f7f7;padding-top:0;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-lg-8 offset-0 offset-sm-0 offset-md-1 offset-lg-2 ">
+                            <div class="col-md-10 col-lg-8 offset-0 offset-sm-0 offset-md-1 offset-lg-2 " style="width: 100%;">
                                 
                                 <!-- iconbox -->
                                 <div class="iconbox">
-                                    <div class="iconbox__icon"><i class="ti-headphone-alt"></i></div>
+                                    <div class="iconbox__icon"><i class="ti-timer"></i>/<i class="ti-money"></i></div>
                                     <div>
-                                        <h2 class="iconbox__title"><a href="#">Best National Locations</a></h2>
+                                        <h2 class="iconbox__title"><a href="#">ЦЕНЫ И СРОКИ</a></h2>
                                         
                                         
-                                        <div class="iconbox__description">Nam elit ligula, egestas et ornare non, viverra eu justo. Aliquam ornare lectus ut pharetra dictum. Aliquam erat volutpat. In fringilla erat at eros pharetra faucibus. Nunc a magna eu lectus fringilla interdum luctus vitae diam. Morbi ac orci ac dolor pellentesque interdum vel accumsan risus. In ves</div>
+                                        <div class="iconbox__description">До проектирования работ по созданию сайта определить стоимость и срок их выполнения представляется затруднительным. Ниже приведены ориентировочные цены и максимальные сроки создания Вашего сайта вебстудией «5+».</div>
                                     </div>
                                 </div><!-- End / iconbox -->
                                 
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-3 ">
+                            <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
                                 <div class="iconbox iconbox__style-02">
-                                    <div class="iconbox__icon"><i class="ti-announcement"></i></div>
+                                    <div class="iconbox__icon"><i class="ti-desktop"></i></div>
                                     <div>
-                                        <h2 class="iconbox__title"><a href="#">Brand &amp; Identity</a></h2>
+                                        <h2 class="iconbox__title"><a href="#">САЙТ-ВИЗИТКА/LANDING PAGE</a></h2>
                                         <div class="iconbox__description">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
                                     </div>
                                 </div><!-- End / iconbox -->
                                 
                             </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 ">
+                            <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
                                 <div class="iconbox iconbox__style-02">
-                                    <div class="iconbox__icon"><i class="ti-headphone"></i></div>
+                                    <div class="iconbox__icon"><i class="ti-shopping-cart"></i></div>
                                     <div>
-                                        <h2 class="iconbox__title"><a href="#">Marketing Planning</a></h2>
+                                        <h2 class="iconbox__title"><a href="#">САЙТ-КАТАЛОГ</a></h2>
                                         <div class="iconbox__description">Etiam non varius justo, vel tempor mi. Nulla facilisi. Fusce at tortor arcu. Suspendisse maximus ac </div>
                                     </div>
                                 </div><!-- End / iconbox -->
                                 
                             </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 ">
-                                
-                                <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02">
-                                    <div class="iconbox__icon"><i class="ti-timer"></i></div>
-                                    <div>
-                                        <h2 class="iconbox__title"><a href="#">Business Planning</a></h2>
-                                        <div class="iconbox__description">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
-                                    </div>
-                                </div><!-- End / iconbox -->
-                                
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-3 ">
-                                
-                                <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02">
-                                    <div class="iconbox__icon"><i class="ti-briefcase"></i></div>
-                                    <div>
-                                        <h2 class="iconbox__title"><a href="#">Email Marketing</a></h2>
-                                        <div class="iconbox__description">Suspendisse ac elit vitae est lacinia interdum eu sit amet mauris. Phasellus aliquam nisi sit amet l</div>
-                                    </div>
-                                </div><!-- End / iconbox -->
-                                
-                            </div>
+                           
                         </div>
                     </div>
                 </section>
