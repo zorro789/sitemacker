@@ -55,7 +55,7 @@ LtAppAsset::register($this);
                         
                         <!-- consult-menu -->
                         <ul class="consult-menu">
-                            <li class="current-menu-item"><a href="index.html">Home</a>
+                            <li class="current-menu-item"><a href="http://five.plus/">Home</a>
                             </li>
                             <li><a href="/admin/texts/index">Texts</a>
                             </li>
@@ -70,7 +70,7 @@ LtAppAsset::register($this);
             </header><!-- End / header -->
             
             <!-- Content-->
-            <div class="md-content" style="height: 900px; text-align: center; margin-left: 30px; margin-right: 60px;">
+            <div class="md-content" style="height: 900px; text-align: center; margin-left: 30px; margin-right: 60px;   margin-top: 140px;">
            
                 <?= $content ?>
                

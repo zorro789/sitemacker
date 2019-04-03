@@ -984,9 +984,9 @@ textarea {
     height: auto !important;
 }
 
- {
+ 
     /* no-gutters Class Rules */
-}
+
 
 .list-style-none {
     list-style: none;
@@ -3709,7 +3709,7 @@ mark, .mark {
         position: static;
     }
 }
-@charset "UTF-8";
+/*@charset "UTF-8";*/
 
 
 
@@ -3777,7 +3777,7 @@ mark, .mark {
 
 .header.shrink .header__logo {
     height: 60px;
-    line-height: 60px;
+    line-height: 71px;
 }
 
 .header.shrink .header__chooseLanguage, .header.shrink .search-form__toggle {
@@ -4668,4 +4668,18 @@ mark, .mark {
     right: 0;
     bottom: 50px;
     position: absolute;
+}
+
+.owl-stage-outer{
+   max-height: 1080px; 
+}
+.slider__item{
+        background-repeat: no-repeat;
+    background-position: top;
+}
+
+.slider__content{
+    position: absolute;
+    top: 20%;
+    width: 100%;
 }
