@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Texts;
+use app\models\Prices;
 
 class SiteController extends Controller
 {
@@ -61,7 +62,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $prices = Prices::findAll(['status' => '1']);
+        return $this->render('index', [
+            'prices' => $prices,
+        ]);
     }
 
     /**

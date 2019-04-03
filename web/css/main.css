@@ -93,6 +93,7 @@ img {
         padding-top: 110px;
         padding-bottom: 110px;
     }
+   
 }
 
 .md-text-left, .text-left {
@@ -2571,12 +2572,14 @@ mark, .mark {
     .iconbox {
         margin-bottom: calc(7.95455vw + 24.54545px);
     }
+     
 }
 
 @media (min-width: 1200px) {
     .iconbox {
         margin-bottom: 120px;
     }
+    
 }
 
 .iconbox__icon {
@@ -2609,7 +2612,7 @@ mark, .mark {
 }
 
 .iconbox__style-02 {
-    margin-bottom: 30px;
+    margin: 0;
 }
 
 .iconbox__style-02 .iconbox__icon {
@@ -2624,6 +2627,7 @@ mark, .mark {
     margin-bottom: 30px;
     color: #f39c12;
     font-size: 24px;
+    margin-top: 30px;
 }
 
 .iconbox__style-02 .iconbox__title {
@@ -4709,4 +4713,23 @@ height: 100%;
 min-width: 100%; 
 min-height: 100%;
 width: auto; height: auto; 
+}
+
+/* 34. tabs
+--------------------------------------------------------------------------------*/
+.priceclass{
+    background-color: #d3cece;
+}
+.tabs {
+    width: 200%; 
+    border-radius: 0 0 20px 20px;
+}
+
+@media (max-width: 1200px) {
+    
+    
+.tabs {
+    width: 100%; 
+    border-radius: 0 0 20px 20px;
+}
 }

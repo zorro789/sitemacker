@@ -126,31 +126,76 @@ $this->title = 'My Yii Application';
                             <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02">
+                                <div class="iconbox iconbox__style-02" id="Price1" style="border-radius: 20px 20px 0 0;">
                                     <div class="iconbox__icon"><i class="ti-desktop"></i></div>
                                     <div>
-                                        <h2 class="iconbox__title"><a href="#">САЙТ-ВИЗИТКА/LANDING PAGE</a></h2>
-                                        <div class="iconbox__description">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
+                                        <h2 class="iconbox__title" id="landingtitle" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 30px;"><a onclick="openPrice1()">САЙТ-ВИЗИТКА/LANDING PAGE<br>цены/сроки</a></h2>
                                     </div>
                                 </div><!-- End / iconbox -->
-                                
+                                <div id="landingprice" class="tabs" style="background-color: #d3cece; display: none; padding-bottom: 40px">
+                            <?php for($i=1; $i<21; $i++) {?>
+    <?php $b = 'content'.$i;?>
+    <?php if ($prices[0]->$b):?>
+    <br>
+    <h4 style="text-indent: 2.5em; line-height: 1.5; margin-left: 40px;  margin-right: 40px;">
+    <?= $prices[0]->$b?>
+    </h4>
+    <?php endif?>
+    <?php }?>
+                        </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02">
+                                <div class="iconbox iconbox__style-02" id="Price2" style="border-radius: 20px 20px 0 0;">
                                     <div class="iconbox__icon"><i class="ti-shopping-cart"></i></div>
                                     <div>
-                                        <h2 class="iconbox__title"><a href="#">САЙТ-КАТАЛОГ</a></h2>
-                                        <div class="iconbox__description">Etiam non varius justo, vel tempor mi. Nulla facilisi. Fusce at tortor arcu. Suspendisse maximus ac </div>
+                                        <h2 class="iconbox__title" id="catalogtitle" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 30px;"><a onclick="openPrice2()">САЙТ-КАТАЛОГ<br>цены/сроки</a></h2>
                                     </div>
                                 </div><!-- End / iconbox -->
-                                
+                                <div id="catalogprice" class="tabs" style="background-color: #d3cece; display: none; float: right; padding-bottom: 40px">
+                            <?php for($j=1; $j<21; $j++) {?>
+    <?php $c = 'content'.$j;?>
+    <?php if ($prices[1]->$c):?>
+    <br>
+    <h4 style="text-indent: 2.5em; line-height: 1.5; margin-left: 40px;  margin-right: 40px;">
+    <?= $prices[1]->$c?>
+    </h4>
+    <?php endif?>
+    <?php }?>
+                        </div>
                             </div>
                            
                         </div>
+                        
+                        
+                        
                     </div>
                 </section>
+                <script type="text/javascript">
+       
+   function openPrice1() {
+       var element = document.getElementById("Price1");
+   element.classList.add("priceclass");
+           document.getElementById("landingprice").style.display = "inline-block";
+           document.getElementById("catalogprice").style.display = "none";
+           document.getElementById("landingtitle").style.color = "#f39c12";
+           document.getElementById("catalogtitle").style.color = "#1f1c2f";
+           var element1 = document.getElementById("Price2");
+           element1.classList.remove("priceclass");
+}
+   
+    function openPrice2() {
+       var element1 = document.getElementById("Price2");
+   element1.classList.add("priceclass");
+           document.getElementById("catalogprice").style.display = "inline-block";
+           document.getElementById("landingprice").style.display = "none";
+           document.getElementById("catalogtitle").style.color = "#f39c12";
+           document.getElementById("landingtitle").style.color = "#1f1c2f";
+            var element = document.getElementById("Price1");
+            element.classList.remove("priceclass");
+}
+       </script>
                 <!-- End / Section -->
                 
                 <!-- About-->
