@@ -34,7 +34,10 @@ LtAppAsset::register($this);
     
     <body>
         <?php $this->beginBody() ?>
-        <div class="page-wrap">
+        <div class="page-wrap" <?php if(isset($this->blocks['block1'])): ?>
+    <?= $this->blocks['block1']; ?>
+    
+    <?php endif;?>>
             
             <!-- header -->
             <header class="header header__style-02">
@@ -76,13 +79,13 @@ LtAppAsset::register($this);
                         <!-- consult-menu -->
                         <ul class="consult-menu">
                           
-                            <li class=" current-menu-item menu-item-has-children"><a href="site/index.html">Виды сайтов</a>
+                            <li class=" current-menu-item menu-item-has-children"><a href="/">Виды сайтов</a>
                                 <ul class="sub-menu">
-                                    <li><a href="site/about&id=1"><?= Html::a('Caqn-dbpbn', ['site/about', 'id'=>1]);?>Сайт-визитка</a>
+                                    <li><?= Html::a('Сайт-визитка', ['site/about', 'id'=>1]);?>
                                     </li>
-                                    <li><a href="404.html">Лендинг пейдж</a>
+                                    <li><?= Html::a('Лендинг пейдж', ['site/about', 'id'=>2]);?>
                                     </li>
-                                    <li><a href="typography.html">Сайт-каталог</a>
+                                    <li><?= Html::a('Сайт-каталог', ['site/about', 'id'=>3]);?>
                                     </li>
                                 </ul>
                             </li>
