@@ -3249,14 +3249,15 @@ mark, .mark {
 --------------------------------------------------------------------------------*/
 
 .testimonial {
-    border: 1px solid #ebebeb;
+   /*border: 1px solid #ebebeb;*/
     padding: 40px;
     margin: 50px 0;
     transition: all ease .3s;
+    
 }
 
 .testimonial:hover {
-    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .2);
+   /* box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .2);*/
 }
 
 .testimonial__info {
@@ -3265,7 +3266,7 @@ mark, .mark {
     position: relative;
 }
 
-.testimonial__info:after {
+/*.testimonial__info:after {
     content: "\E67E";
     font-family: 'themify';
     font-size: 48px;
@@ -3273,7 +3274,7 @@ mark, .mark {
     top: -15px;
     right: 5px;
     position: absolute;
-}
+}*/
 
 .testimonial__avatar {
     float: left;

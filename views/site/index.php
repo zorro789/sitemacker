@@ -319,7 +319,7 @@ $this->title = 'My Yii Application';
                                 
                                 <!-- title-01 -->
                                 <div class="title-01" style="margin-bottom:50px;">
-                                    <h2 class="title-01__title">What’s Client Say?</h2>
+                                    <h2 class="title-01__title">Наши преимущества</h2>
                                 </div><!-- End / title-01 -->
                                 
                             </div>
@@ -332,10 +332,20 @@ $this->title = 'My Yii Application';
                                 <!-- testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__info"><a class="testimonial__avatar" href="#"><img src="web/img/avatars/avatar-01.jpg" alt=""/></a>
-                                        <h5 class="testimonial__name">Brandon Hanson</h5><span class="testimonial__position">Support</span>
+                                        <h3><?= $questions[0]->title?></h3><span class="testimonial__position">Support</span>
                                     </div>
                                     <div class="testimonial__content">
-                                        <div class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet ut lacus a tincidunt. Quisque luctus nibh augue, non ultrices arcu molestie in. In</div>
+                                        <div class="testimonial__text">
+                                                                <?php for($q=1; $q<11; $q++) {?>
+    <?php $cq = 'content'.$q;?>
+    <?php if ($questions[0]->$cq):?>
+    <br>
+    <h4 style="text-indent: 2.5em; line-height: 1.5; margin-left: 40px;  margin-right: 40px; text-align: justify;">
+    <?= $questions[0]->$cq?>
+    </h4>
+    <?php endif?>
+    <?php }?>    
+                                        </div>
                                     </div>
                                 </div><!-- End / testimonial -->
                                 
@@ -343,10 +353,19 @@ $this->title = 'My Yii Application';
                                 <!-- testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__info"><a class="testimonial__avatar" href="#"><img src="web/img/avatars/avatar-02.jpg" alt=""/></a>
-                                        <h5 class="testimonial__name">Brandon Hanson</h5><span class="testimonial__position">CEO &amp; Founder</span>
+                                        <h3><?= $questions[1]->title?></h3><span class="testimonial__position">CEO &amp; Founder</span>
                                     </div>
                                     <div class="testimonial__content">
-                                        <div class="testimonial__text">Sed ante nisl, fermentum et facilisis in, maximus sed ipsum. Cras hendrerit feugiat eros, ut fringilla nunc finibus sed. Quisque vitae dictum augue, v</div>
+                                        <div class="testimonial__text">
+                                         <?php for($w=1; $w<11; $w++) {?>
+    <?php $cw = 'content'.$w;?>
+    <?php if ($questions[1]->$cw):?>
+    <br>
+    <h4 style="text-indent: 2.5em; line-height: 1.5; margin-left: 40px;  margin-right: 40px; text-align: justify;">
+    <?= $questions[1]->$cw?>
+    </h4>
+    <?php endif?>
+    <?php }?>    </div>
                                     </div>
                                 </div><!-- End / testimonial -->
                                 
@@ -354,10 +373,18 @@ $this->title = 'My Yii Application';
                                 <!-- testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__info"><a class="testimonial__avatar" href="#"><img src="web/img/avatars/1.jpg" alt=""/></a>
-                                        <h5 class="testimonial__name">Maria Gutierrez</h5><span class="testimonial__position">Designer</span>
+                                        <h3><?= $questions[2]->title?></h3><span class="testimonial__position">Designer</span>
                                     </div>
                                     <div class="testimonial__content">
-                                        <div class="testimonial__text">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu sagittis volutpat. Aliquam erat volutpat. Praesen</div>
+                                        <div class="testimonial__text"> <?php for($e=1; $e<11; $e++) {?>
+    <?php $ce = 'content'.$e;?>
+    <?php if ($questions[2]->$ce):?>
+    <br>
+    <h4 style="text-indent: 2.5em; line-height: 1.5; margin-left: 40px;  margin-right: 40px; text-align: justify;">
+    <?= $questions[2]->$ce?>
+    </h4>
+    <?php endif?>
+    <?php }?>   </div>
                                     </div>
                                 </div><!-- End / testimonial -->
                                 

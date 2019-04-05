@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Texts;
 use app\models\Prices;
+use app\models\Questions;
 
 class SiteController extends Controller
 {
@@ -63,8 +64,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $prices = Prices::findAll(['status' => '1']);
+        $questions = Questions::findAll(['status' => '1']);
         return $this->render('index', [
             'prices' => $prices,
+            'questions' => $questions,
         ]);
     }
 
