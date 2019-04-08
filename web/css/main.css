@@ -4734,3 +4734,168 @@ width: auto; height: auto;
     border-radius: 0 0 20px 20px;
 }
 }
+
+.newclass{
+    background-position: 5% 5%;
+}
+.bar1{
+     color: red;
+     transform: translate(3516px, 0px);
+}
+.changebar1 {
+     color: red;
+     transform: translate(0px, 0px);
+     transition: 1s;
+}
+.bar2{
+     color: red;
+     transform: translate(-3516px, 0px);
+}
+.changebar2 {
+     color: red;
+     transform: translate(0px, 0px);
+     transition: 1.5s;
+}
+.bar3{
+     color: red;
+     transform: translate(3516px, 0px);
+}
+.changebar3 {
+     color: red;
+     transform: translate(0px, 0px);
+     transition: 2s;
+}
+.bar4{
+     color: red;
+     transform: translate(-3516px, 0px);
+}
+.changebar4 {
+     color: red;
+     transform: translate(0px, 0px);
+     transition: 2.5s;
+}
+
+
+.bar5{
+     color: goldenrod;
+     transform: rotate(-270deg) translate(0px, 3516px);
+}
+.changebar5 {
+     color: goldenrod;
+     transform: rotate(0deg) translate(0px, 0px);
+     transition: 1s;
+}
+.bar6{
+     color: goldenrod;
+     transform: rotate(270deg) translate(0px, 3516px);
+}
+.changebar6 {
+     color: goldenrod;
+     transform: rotate(0deg) translate(0px, 0px);
+     transition: 1.5s;
+}
+.bar7{
+     color: goldenrod;
+     transform: rotate(-270deg) translate(0px, 3516px);
+}
+.changebar7 {
+     color: goldenrod;
+     transform: rotate(0deg) translate(0px, 0px);
+     transition: 2s;
+}
+.bar8{
+     color: goldenrod;
+     transform: rotate(270deg) translate(0px, 3516px);
+}
+.changebar8 {
+     color: goldenrod;
+     transform: rotate(0deg) translate(0px, 0px);
+     transition: 2.5s;
+}
+.bar9{
+     color: green;
+     transform: translate(0px, 3200px);
+}
+.changebar9 {
+     color: green;
+     transform: translate(0px, 0px);
+     transition: 1s;
+}
+.bar10{
+     color: green;
+     transform: translate(0px, 3200px);
+}
+.changebar10 {
+     color: green;
+     transform: translate(0px, 0px);
+     transition: 1.5s;
+}
+.bar11{
+     color: green;
+     transform: translate(0px, 3200px);
+}
+.changebar11 {
+     color: green;
+     transform: translate(0px, 0px);
+     transition: 2s;
+}
+.bar12{
+     color: green;
+     transform: translate(0px, 3200px);
+}
+.changebar12 {
+     color: green;
+     transform: translate(0px, 0px);
+     transition: 2.5s;
+}
+.bar13{
+     color: #af31df;
+     text-shadow: 2px 2px 5px #d135cb;
+     font-size: 36px;
+     opacity: 0;
+}
+.changebar13 {
+      color: #af31df;
+  text-align: center;
+  transition: 1s;
+  -webkit-animation: changebar13 1s ease-in-out infinite alternate;
+  -moz-animation: changebar13 1s ease-in-out infinite alternate;
+  animation: changebar13 1s ease-in-out infinite alternate;
+  opacity: 1;
+     
+}
+.lithbar13 {
+     color: #af31df;
+     text-shadow: 2px 2px 5px #d135cb;
+}
+
+.bar14{
+     color: green;
+     transform: rotateY(90deg);
+}
+.changebar14 {
+    color: green;
+     transform: rotateY(360deg);
+     transition: 2s;
+}
+
+.bar15{
+     color: green;
+     transform: rotateX(90deg);
+}
+.changebar15 {
+    color: green;
+     transform: rotateX(360deg);
+     transition: 2s;
+}
+
+@-webkit-keyframes changebar13 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+

@@ -32,7 +32,7 @@ LtAppAsset::register($this);
        
     </head>
     
-    <body>
+    <body onload="my_sb1()">
         <?php $this->beginBody() ?>
         <div class="page-wrap" <?php if(isset($this->blocks['block1'])): ?>
     <?= $this->blocks['block1']; ?>
@@ -195,3 +195,4 @@ LtAppAsset::register($this);
     </body>
 </html>
 <?php $this->endPage() ?>
+
