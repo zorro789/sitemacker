@@ -399,7 +399,7 @@ $this->title = 'My Yii Application';
                             
                         
                         
-                     <div class="form-01 consult-form js-consult-form__content" id="paral36" style="position: relative;
+                     <div class="form-01 consult-form js-consult-form__content" id="paral36" style="position: inherit;
     top: 200px;
     z-index: 99;">
                             <h2 class="form-01__title">Give Us Your Feedback</h2>
@@ -494,7 +494,7 @@ $("#paral33").click(function(){
                         <div class="row">
                                 
                                 <!-- title-01 -->
-                                <div class="title-01" style="margin-top: 200px;">
+                                <div class="title-01">
                                     <h2 class="bar13" id="subar13">Этапы работ</h2>
                                 </div><!-- End / title-01 -->
                                 
@@ -516,7 +516,7 @@ $("#paral33").click(function(){
                             <h3 class="bar4" id="subar4"><?= $stages[3]->content?></h3>
                         </div>
                        
-                        <h3 style="margin-top: 60px;">2 ЭТАП</h3>
+                        <h3 class="bar15" id="subar15" style="margin-top: 60px;">2 ЭТАП</h3>
                         <div>
                             <h3 class="bar5" id="subar5"><?= $stages[4]->content?></h3>
                         </div>
@@ -530,7 +530,7 @@ $("#paral33").click(function(){
                             <h3 class="bar8" id="subar8"><?= $stages[7]->content?></h3>
                         </div>
                        
-                        <h3 style="margin-top: 60px;">3 ЭТАП</h3>
+                        <h3 class="bar16" id="subar16" style="margin-top: 60px;">3 ЭТАП</h3>
                         <div>
                             <h3 class="bar9" id="subar9"><?= $stages[8]->content?></h3>
                         </div>
@@ -601,6 +601,10 @@ $("#paral33").click(function(){
     document.getElementById("subar12").classList.add("changebar12");
     document.getElementById("subar14").classList.remove("bar14");
     document.getElementById("subar14").classList.add("changebar14");
+    document.getElementById("subar15").classList.remove("bar15");
+    document.getElementById("subar15").classList.add("changebar15");
+    document.getElementById("subar16").classList.remove("bar16");
+    document.getElementById("subar16").classList.add("changebar16");
    }
    
         else {
@@ -632,6 +636,10 @@ $("#paral33").click(function(){
     document.getElementById("subar12").classList.add("bar12");
     document.getElementById("subar14").classList.remove("changebar14");
     document.getElementById("subar14").classList.add("bar14");
+    document.getElementById("subar15").classList.remove("changebar15");
+    document.getElementById("subar15").classList.add("bar15");
+    document.getElementById("subar16").classList.remove("changebar16");
+    document.getElementById("subar16").classList.add("bar16");
    }
    })
 })
