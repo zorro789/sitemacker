@@ -1,6 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
+
+
 
 $this->title = 'My Yii Application';
 ?>
@@ -16,7 +19,7 @@ $this->title = 'My Yii Application';
                                 <div class="md-tb__cell">
                                     <div class="slider__content">
                                         <div class="container">
-                                            <h2>Сайт-визитка за 150 рублей</h2>
+                                            <h2><?= Html::a('Сайт-визитка за 150 рублей', ['site/about', 'id'=>1]);?></h2>
                                             <p>будет содержать практически все опции типового сайта.</p>
                                         </div>
                                     </div>
@@ -28,7 +31,7 @@ $this->title = 'My Yii Application';
                                 <div class="md-tb__cell">
                                     <div class="slider__content">
                                         <div class="container">
-                                            <h2>Лендинг пейдж (Landing Page) за 150 рублей</h2>
+                                            <h2><?= Html::a('Лендинг пейдж (Landing Page) за 150 рублей', ['site/about', 'id'=>2]);?></h2>
                                             <p>позволит обеспечить полноценное продвижение ваших товаров в сети.</p>
                                         </div>
                                     </div>
@@ -40,7 +43,7 @@ $this->title = 'My Yii Application';
                                 <div class="md-tb__cell">
                                     <div class="slider__content">
                                         <div class="container">
-                                            <h2>Сайт-каталог за 300 рублей</h2>
+                                            <h2><?= Html::a('Сайт-каталог за 300 рублей', ['site/about', 'id'=>3]);?></h2>
                                             <p>даст возможность создать интернет-магазин для повышения объема продаж Вашей продукции.</p>
                                         </div>
                                     </div>
@@ -62,9 +65,10 @@ $this->title = 'My Yii Application';
                                     
                                     <!-- textbox -->
                                     <div class="textbox">
-                                        <div class="textbox__image"><a href="#"><img src="web/img/services/Visit.jpg" alt=""/></a></div>
+                                      <?php $image1 = '<img class="textbox__image" src="web/img/services/Visit.jpg" alt="сайт-визитка" />';?>
+                                        <?= Html::a($image1, ['site/about', 'id'=>1]);?>
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">Сайт-визитка</a></h2>
+                                            <h2 class="textbox__title"><?= Html::a('Сайт-визитка', ['site/about', 'id'=>1]);?></h2>
                                             <div class="textbox__description">Сайт-визитка ­– интернет-ресурс, который позволяет представить в сети Интернет информацию о себе, своем бизнесе, месте и времени его работы.
 Как правило, подобный сайт состоит из одной или нескольких страниц.</div>
                                         </div>
@@ -75,9 +79,10 @@ $this->title = 'My Yii Application';
                                     
                                     <!-- textbox -->
                                     <div class="textbox">
-                                        <div class="textbox__image"><a href="#"><img src="web/img/services/workplace1jpeg.jpg" alt=""/></a></div>
+                                         <?php $image2 = '<img class="textbox__image" src="web/img/services/workplace1jpeg.jpg" alt="Landing Page" />';?>
+                                        <?= Html::a($image2, ['site/about', 'id'=>2]);?>
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">Лендинг пейдж</a></h2>
+                                            <h2 class="textbox__title"><?= Html::a('Лендинг пейдж', ['site/about', 'id'=>1]);?></h2>
                                             <div class="textbox__description">Landing Page (посадочная страница) – интернет-ресурс, который позволяет стимулировать посетителей к приобретению того или иного товара.
 Как правило, подобный сайт состоит из одной страницы. </div>
                                         </div>
@@ -88,9 +93,11 @@ $this->title = 'My Yii Application';
                                     
                                     <!-- textbox -->
                                     <div class="textbox">
-                                        <div class="textbox__image"><a href="#"><img src="web/img/services/Catalog.jpg" alt=""/></a></div>
+                                         <?php $image3 = '<img class="textbox__image" src="web/img/services/Catalog.jpg" alt="Catalog" />';?>
+                                        <?= Html::a($image3, ['site/about', 'id'=>3]);?>
+                                        
                                         <div class="textbox__body">
-                                            <h2 class="textbox__title"><a href="#">Сайт-каталог</a></h2>
+                                            <h2 class="textbox__title"><?= Html::a('Сайт-каталог', ['site/about', 'id'=>1]);?></h2>
                                             <div class="textbox__description">Сайт-каталог – интернет-ресурс, который позволяет разместить на сайте каталог товаров с фотографиями, краткой либо полной информацией о них, рейтингом, ценой, акционными предложениями, скидками и т.д.</div>
                                         </div>
                                     </div><!-- End / textbox -->
@@ -104,7 +111,8 @@ $this->title = 'My Yii Application';
                 
                
                 <!-- Section -->
-                <section class="md-section" style="background-color:#f7f7f7;padding-top:0;">
+                <a name="prices"></a>
+                <section class="md-section" style="background-color:#f7f7f7;padding-top:0; padding-top: 80px;">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 col-lg-8 offset-0 offset-sm-0 offset-md-1 offset-lg-2 " style="width: 100%;">
@@ -126,7 +134,7 @@ $this->title = 'My Yii Application';
                             <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02" id="Price1" style="border-radius: 20px 20px 0 0;">
+                                <div class="iconbox iconbox__style-02" id="Price1" style="border-radius: 20px 20px 0 0; cursor: pointer;" onclick="openPrice1()">
                                     <div class="iconbox__icon"><i class="ti-desktop"></i></div>
                                     <div>
                                         <h2 class="iconbox__title" id="landingtitle" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 30px;"><a onclick="openPrice1()">САЙТ-ВИЗИТКА/LANDING PAGE<br>цены/сроки</a></h2>
@@ -147,7 +155,7 @@ $this->title = 'My Yii Application';
                             <div class="col-sm-12 col-md-12 col-lg-6 ">
                                 
                                 <!-- iconbox -->
-                                <div class="iconbox iconbox__style-02" id="Price2" style="border-radius: 20px 20px 0 0;">
+                                <div class="iconbox iconbox__style-02" id="Price2" style="border-radius: 20px 20px 0 0; cursor: pointer;" onclick="openPrice2()">
                                     <div class="iconbox__icon"><i class="ti-shopping-cart"></i></div>
                                     <div>
                                         <h2 class="iconbox__title" id="catalogtitle" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 30px;"><a onclick="openPrice2()">САЙТ-КАТАЛОГ<br>цены/сроки</a></h2>
@@ -201,104 +209,21 @@ $this->title = 'My Yii Application';
                 <!-- About-->
                 
                 <!-- Section -->
-                <section class="md-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 ">
-                                
-                                <!-- title-01 -->
-                                <div class="title-01 title-01__style-03 md-text-left">
-                                    <h6 class="title-01__subTitle">about</h6>
-                                    <h2 class="title-01__title">We Are The Leaders In This Industry</h2>
-                                    <div>Nam suscipit nisi risus, et porttitor metus molestie a. Phasellus id quam id turpis suscipit pretium. Maecenas ultrices, lacus ut accumsan maximus, odio augue rhoncus augue, vulputate maximus mi sapien sed nisl. Sed fermentum congue orci sed lacinia. Nulla nunc purus, consectetur</div>
-                                </div><!-- End / title-01 -->
-                                
-                                <div class="row">
-                                    <div class="col-sm-4 ">
-                                        
-                                        <!-- box-number -->
-                                        <div class="box-number">
-                                            <div class="box-number__number">
-                                                <h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">99</h2>
-                                            </div>
-                                            <div class="box-number__description">Happy clients</div>
-                                        </div><!-- End / box-number -->
-                                        
-                                    </div>
-                                    <div class="col-sm-4 ">
-                                        
-                                        <!-- box-number -->
-                                        <div class="box-number">
-                                            <div class="box-number__number">
-                                                <h2 class="js-counter" data-counter-time="1200" data-counter-delay="10">2200</h2>
-                                            </div>
-                                            <div class="box-number__description">Message per Day</div>
-                                        </div><!-- End / box-number -->
-                                        
-                                    </div>
-                                    <div class="col-sm-4 ">
-                                        
-                                        <!-- box-number -->
-                                        <div class="box-number">
-                                            <div class="box-number__number">
-                                                <h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">15</h2>
-                                            </div>
-                                            <div class="box-number__description">Awards</div>
-                                        </div><!-- End / box-number -->
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 ">
-                                <div class="js-consult-slider">
-                                    
-                                    <!-- carousel__element owl-carousel -->
-                                    <div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":30,"responsive":{"0":{"items":2},"576":{"items":3},"992":{"items":1}}}'>
-                                        <div class="image-full"><img src="web/img/image-01.jpg" alt=""></div>
-                                        <div class="image-full"><img src="web/img/image-02.jpg" alt=""></div>
-                                    </div><!-- End / carousel__element owl-carousel -->
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End / Section -->
-                
-                <!-- Contact us-->
-                
-                <!-- Section -->
-                <section class="md-section md-skin-dark js-consult-form" style="background-image:url(&quot;web/img/backgrounds/1.jpg&quot;);">
-                    <div class="md-overlay"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-0 offset-sm-0 offset-md-0 offset-lg-2 ">
-                                
-                                <!-- title-01 -->
-                                <div class="title-01 title-01__style-02">
-                                    <h2 class="title-01__title">Contact With Us via Hot Line</h2>
-                                    <div>Sed ante nisl, fermentum et facilisis in, maximus </div>
-                                </div><!-- End / title-01 -->
-                                
-                                <div class="consult-phone">(+88) 242 2323 777</div>
-                            </div>
-                        </div>
-                        
-                       
-                        
-                    </div>
-                </section>
+               
                 <!-- End / Section -->
                 
                 <!-- What’s Client Say ?-->
                 
                 <!-- Section -->
+                <a name="advantages"></a>
                 <section class="md-section" style="padding-bottom:0;">
                     <div class="container">
                         <div class="row">
                                 
                                 <!-- title-01 -->
+                                
                                 <div class="title-01" style="margin-bottom:50px;">
+                                    
                                     <h2 class="title-01__title">Наши преимущества</h2>
                                 </div><!-- End / title-01 -->
                                 
@@ -489,13 +414,16 @@ $("#paral33").click(function(){
                 <!-- Latest Blogs -->
                 
                 <!-- Section -->
+             
                 <section class="md-section consult-background" style="z-index: 0;">
-                    <div class="container">
+                    <a name="stages"></a>  
+                    <div class="container" style="padding-top: 80px;">
                         <div class="row">
                                 
                                 <!-- title-01 -->
                                 <div class="title-01">
-                                    <h2 class="bar13" id="subar13">Этапы работ</h2>
+                                    
+                                     <h2 class="bar13" id="subar13">Этапы работ</h2>
                                 </div><!-- End / title-01 -->
                                 
                         </div>
@@ -548,6 +476,7 @@ $("#paral33").click(function(){
                         
                     </div>
                 </section>
+                
                 <!-- End / Section -->
                 
             </div>
@@ -570,7 +499,7 @@ $("#paral33").click(function(){
 
      $(window).scroll(function() {
   
-   $('.consult-background').each(function(index, element) {
+   $('.consult-background').each(function open (index, element) {
     var visible1 = isInViewport1(this)
     if(visible1) {
      document.getElementById("subar13").classList.remove("bar13");

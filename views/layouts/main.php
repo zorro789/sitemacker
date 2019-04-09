@@ -32,7 +32,7 @@ LtAppAsset::register($this);
        
     </head>
     
-    <body onload="my_sb1()">
+    <body>
         <?php $this->beginBody() ?>
         <div class="page-wrap" <?php if(isset($this->blocks['block1'])): ?>
     <?= $this->blocks['block1']; ?>
@@ -42,22 +42,9 @@ LtAppAsset::register($this);
             <!-- header -->
             <header class="header header__style-02">
                 <div class="container">
-                    <div class="header__logo"><a href="index.html"><img src="web/img/logo.png" alt=""/></a></div>
+                    <div class="header__logo"><a href="/"><img src="../web/img/logo.png" alt=""/></a></div>
                     <div class="header__toogleGroup">
-                        <div class="header__chooseLanguage">
-                                        
-                                        <!-- dropdown -->
-                                        <div class="dropdown" data-init="dropdown"><a class="dropdown__toggle" href="javascript:void(0)">EN <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <div class="dropdown__content" data-position="right">
-                                                <ul class="list-style-none">
-                                                    <li><a href="#">EN</a></li>
-                                                    <li><a href="#">GE2</a></li>
-                                                    <li><a href="#">VI2</a></li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- End / dropdown -->
-                                        
-                        </div>
+                     
                         <div class="search-form">
                             <div class="search-form__toggle"><i class="ti-search"></i></div>
                             <div class="search-form__form">
@@ -89,21 +76,21 @@ LtAppAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Цены и сроки</a>
+                            <li class="menu-item-has-children"><?= Html::a('Цены и сроки', ['/', '#'=>'prices']);?>
                                 <ul class="sub-menu">
-                                    <li><a href="comming-soon.html">Сайт-визитка</a>
+                                    <li onclick="openPrice1()"><?= Html::a('Сайт-визитка', ['/', '#'=>'prices']);?> /*, 'options'=> ['onclick'=>'openPrice1()']*/
                                     </li>
-                                    <li><a href="404.html">Лендинг пейдж</a>
+                                    <li onclick="openPrice1()"><?= Html::a('Лендинг пейдж', ['/', '#'=>'prices']);?>
                                     </li>
-                                    <li><a href="typography.html">Сайт-каталог</a>
+                                    <li onclick="openPrice2()"><?= Html::a('Сайт-каталог', ['/', '#'=>'prices']);?>
                                     </li>
                                 </ul>
                             </li>
                             
-                            <li class="menu-item-has-children"><a href="project.html">Этапы создания</a>
+                            <li class="menu-item-has-children"><?= Html::a('Преимущества', ['/', '#'=>'advantages']);?>
                                 
                             </li>
-                            <li class="menu-item-has-children"><a href="blog.html">Преимущества</a>
+                            <li class="menu-item-has-children"><?= Html::a('Этапы работ', ['/', '#'=>'stages']);?>
                                 
                             </li>
                             

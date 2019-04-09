@@ -4816,7 +4816,7 @@ width: auto; height: auto;
 }
 .bar9{
      color: gray;
-     transform: translate(0px, 3200px);
+     transform: translate(3516px, 0px);
 }
 .changebar9 {
      color: gray;
@@ -4825,7 +4825,7 @@ width: auto; height: auto;
 }
 .bar10{
      color: gray;
-     transform: translate(0px, 3200px);
+     transform: translate(-3516px, 0px);
 }
 .changebar10 {
      color: gray;
@@ -4834,7 +4834,7 @@ width: auto; height: auto;
 }
 .bar11{
      color: gray;
-     transform: translate(0px, 3200px);
+     transform: translate(3516px, 0px);
 }
 .changebar11 {
      color: gray;
@@ -4843,7 +4843,7 @@ width: auto; height: auto;
 }
 .bar12{
      color: gray;
-     transform: translate(0px, 3200px);
+     transform: translate(-3516px, 0px);
 }
 .changebar12 {
      color: gray;
