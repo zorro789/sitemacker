@@ -18,6 +18,7 @@ LtAppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Home</title>
         <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -38,27 +39,19 @@ LtAppAsset::register($this);
     <?= $this->blocks['block1']; ?>
     
     <?php endif;?>>
-            
+        
+            <span style="display: none"> <?php if(isset($this->blocks['block1'])): ?>
+    <?php $aaa = 1; ?>
+    <?php else:?>
+    <?php $aaa = 2; ?>        
+    <?php endif;?>
+            </span>
+            <a name="kinds"></a>
             <!-- header -->
             <header class="header header__style-02">
                 <div class="container">
                     <div class="header__logo"><a href="/"><img src="../web/img/logo.png" alt=""/></a></div>
-                    <div class="header__toogleGroup">
-                     
-                        <div class="search-form">
-                            <div class="search-form__toggle"><i class="ti-search"></i></div>
-                            <div class="search-form__form">
-                                                
-                                                <!-- form-search -->
-                                                <div class="form-search">
-                                                    <form>
-                                                        <input class="form-control" type="text" placeholder="Hit enter to search or ESC to close"/>
-                                                    </form>
-                                                </div><!-- End / form-search -->
-                                                
-                            </div>
-                        </div>
-                    </div>
+                   
                     
                     <!-- consult-nav -->
                     <nav class="consult-nav">
@@ -66,7 +59,7 @@ LtAppAsset::register($this);
                         <!-- consult-menu -->
                         <ul class="consult-menu">
                           
-                            <li class=" current-menu-item menu-item-has-children"><a href="/">Виды сайтов</a>
+                            <li class=" menu-item-has-children"><?= Html::a('Виды сайтов', ['/', '#'=>'kinds']);?><a class="bird fa-angle-down" onclick="openBird1()" style="border-bottom: 0; position: absolute; cursor: pointer; "></a>
                                 <ul class="sub-menu">
                                     <li><?= Html::a('Сайт-визитка', ['site/about', 'id'=>1]);?>
                                     </li>
@@ -76,7 +69,7 @@ LtAppAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><?= Html::a('Цены и сроки', ['/', '#'=>'prices']);?>
+                            <li class="menu-item-has-children"><?= Html::a('Цены и сроки', ['/', '#'=>'prices']);?><a class="bird fa-angle-down" onclick="openBird2()" style="position: absolute; "></a>
                                 <ul class="sub-menu">
                                     <li onclick="openPrice1()"><?= Html::a('Сайт-визитка', ['/', '#'=>'prices']);?> /*, 'options'=> ['onclick'=>'openPrice1()']*/
                                     </li>
@@ -87,16 +80,18 @@ LtAppAsset::register($this);
                                 </ul>
                             </li>
                             
-                            <li class="menu-item-has-children"><?= Html::a('Преимущества', ['/', '#'=>'advantages']);?>
+                            <li><?= Html::a('Преимущества', ['/', '#'=>'advantages']);?>
                                 
                             </li>
-                            <li class="menu-item-has-children"><?= Html::a('Этапы работ', ['/', '#'=>'stages']);?>
+                            <li><?= Html::a('Этапы работ', ['/', '#'=>'stages']);?>
                                 
                             </li>
-                            
-                        </ul><!-- consult-menu -->
+                            </li>
+                            <li><?= Html::a('Контакты', ['/', '#'=>'contacts']);?>
+                            </li>
+                            </ul><!-- consult-menu -->
                         
-                        <div class="navbar-toggle"><span></span><span></span><span></span></div>
+                        <div class="navbar-toggle" onclick="addOpen()"><span></span><span></span><span></span></div>
                     </nav><!-- End / consult-nav -->
                     
                 </div>
@@ -109,71 +104,16 @@ LtAppAsset::register($this);
             
             <!-- footer -->
             <footer class="footer">
-                <div class="footer__main">
-                    <div class="row row-eq-height">
-                        <div class="col-8 col-sm-7 col-md-9 col-lg-3 ">
-                            <div class="footer__item"><a class="consult_logo" href="#"><img src="web/img/logo.png" alt=""/></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet ut lacus a tincidunt.</p>
-                            </div>
+               
+                <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div class="col-sm-6 col-md-6 col-lg-6 footer__copyright">2019 &copy; Copyright. Студия «5+». All rights Reserved.</div>
+                 <div class="consult_backToTop">
+                     <div class="col-sm-6 col-md-6 col-lg-6" style="padding-top: 15px;"><a href="#" id="back-to-top"> <i class="fa fa-angle-up" aria-hidden="true"> </i><span>Back To Top</span></a></div>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
-                            <div class="footer__item">
-                                    
-                                    <!-- widget-text__widget -->
-                                    <section class="widget-text__widget widget">
-                                        <div class="widget-text__content">
-                                            <ul>
-                                                <li><a href="#">Term of Services </a></li>
-                                                <li><a href="#">Privacy Policy </a></li>
-                                                <li><a href="#">Sitemap </a></li>
-                                                <li><a href="#">Help</a></li>
-                                            </ul>
-                                        </div>
-                                    </section><!-- End / widget-text__widget -->
-                                    
-                            </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 ">
-                            <div class="footer__item">
-                                    
-                                    <!-- widget-text__widget -->
-                                    <section class="widget-text__widget widget">
-                                        <div class="widget-text__content">
-                                            <ul>
-                                                <li><a href="#">How It Work </a></li>
-                                                <li><a href="#">Carrier </a></li>
-                                                <li><a href="#">Pricing </a></li>
-                                                <li><a href="#">Support</a></li>
-                                            </ul>
-                                        </div>
-                                    </section><!-- End / widget-text__widget -->
-                                    
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-2 col-xl-2 ">
-                            <div class="footer__item">
-                                    
-                                    <!-- form-sub -->
-                                    <div class="form-sub">
-                                        <h4 class="form-sub__title">Our Newsletter</h4>
-                                        <form class="form-sub__form">
-                                            <div class="form-item">
-                                                <input class="form-control" type="email" placeholder="Enter Your Email Address..."/>
-                                            </div>
-                                            <div class="form-submit">
-                                                <button class="form-button" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                            </div>
-                                        </form>
-                                    </div><!-- End / form-sub -->
-                                    
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2  consult_backToTop">
-                            <div class="footer__item"><a href="#" id="back-to-top"> <i class="fa fa-angle-up" aria-hidden="true"> </i><span>Back To Top</span></a></div>
-                        </div>
-                    </div>
                 </div>
-                <div class="footer__copyright">2017 &copy; Copyright Awe7. All rights Reserved.</div>
+                </div>
             </footer><!-- End / footer -->
             
         </div>
@@ -183,3 +123,69 @@ LtAppAsset::register($this);
 </html>
 <?php $this->endPage() ?>
 
+<script type="text/javascript" >
+   function addOpen() {
+  var element = document.getElementsByClassName("navbar-toggle");
+  var element1 = document.getElementsByClassName("consult-menu");
+  var element4 = document.getElementsByClassName("open");
+  if (!element4[0]){
+  element[0].classList.add("open");
+  element1[0].classList.add("active");
+  }
+  else {
+  element[0].classList.remove("open");
+  element1[0].classList.remove("active");
+  }
+} 
+ 
+    function openBird1() {
+  var element2 = document.getElementsByClassName("sub-menu");
+  if (element2[0].style.display === "block"){
+  element2[0].style.display = "none";
+  }
+  else {
+      element2[0].style.display = "block";
+  }
+} 
+    function openBird2() {
+  var element3 = document.getElementsByClassName("sub-menu");
+        if (element3[1].style.display === "block"){
+  element3[1].style.display = "none";
+  }
+  else {
+      element3[1].style.display = "block";
+  }
+} 
+   
+   
+    function isInViewport3(node) {
+  var rect = node.getBoundingClientRect()
+  return (
+    (rect.height > 0) &&
+    rect.bottom >= 0 &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) 
+  )
+}
+
+var rrr = "<?php echo $aaa; ?>";
+  
+  var element6 = document.getElementsByClassName("header__style-02");
+    if (rrr === "2"){
+        $(window).scroll(function() {
+   $('.slider__content').each(function open (index, element) {
+    var visible3 = isInViewport3(this)
+    
+    if(!visible3) {
+        element6[0].classList.add("shrink");
+ }
+ else {
+      element6[0].classList.remove("shrink");
+ }
+   })
+   })
+  }
+  else {
+      element6[0].classList.add("shrink");
+  }
+   
+    </script>

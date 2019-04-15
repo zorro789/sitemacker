@@ -32,7 +32,7 @@ class AppAsset extends AssetBundle
          
     ];
     public $js = [
-         'web/vendors/jquery/jquery.min.js',
+        //'web/vendors/jquery/jquery.min.js',
         'web/vendors/imagesloaded/imagesloaded.pkgd.js',
         'web/vendors/isotope-layout/isotope.pkgd.js',
         'web/vendors/jquery.countdown/jquery.countdown.min.js',
@@ -44,9 +44,10 @@ class AppAsset extends AssetBundle
         'web/vendors/masonry-layout/masonry.pkgd.js',
         'web/vendors/owl.carousel/owl.carousel.js',
         'web/vendors/jquery.waypoints/jquery.waypoints.min.js',
-        'web/vendors/menu/menu.min.js',
+        //'web/vendors/menu/menu.min.js',
         'web/vendors/smoothscroll/SmoothScroll.min.js',
         'web/js/main.js',
+        'https://github.com/RobinHerbots/Inputmask',
     ];
     public $depends = [
        /* 'yii\web\YiiAsset',

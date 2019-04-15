@@ -7,6 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'My Yii Application';
 ?>
+
             <div class="md-content">
                 
                 <!-- slider -->
@@ -111,7 +112,7 @@ $this->title = 'My Yii Application';
                 
                
                 <!-- Section -->
-                <a name="prices"></a>
+                <a name="prices" style="margin-top: 80px;"></a>
                 <section class="md-section" style="background-color:#f7f7f7;padding-top:0; padding-top: 80px;">
                     <div class="container">
                         <div class="row">
@@ -131,7 +132,8 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-6 ">
+                            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                            <div class="col-sm-6 col-md-6 col-lg-6 ">
                                 
                                 <!-- iconbox -->
                                 <div class="iconbox iconbox__style-02" id="Price1" style="border-radius: 20px 20px 0 0; cursor: pointer;" onclick="openPrice1()">
@@ -152,7 +154,7 @@ $this->title = 'My Yii Application';
     <?php }?>
                         </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6 ">
+                            <div class="col-sm-6 col-md-6 col-lg-6 ">
                                 
                                 <!-- iconbox -->
                                 <div class="iconbox iconbox__style-02" id="Price2" style="border-radius: 20px 20px 0 0; cursor: pointer;" onclick="openPrice2()">
@@ -174,6 +176,7 @@ $this->title = 'My Yii Application';
                         </div>
                             </div>
                            
+                        </div>
                         </div>
                         
                         
@@ -301,7 +304,7 @@ $this->title = 'My Yii Application';
                 <!-- Our partner-->
                 
                 <!-- Section -->
-                
+                <a name="contacts"></a> 
                 <section class="md-section parallax"  id="paral" style="
                          height: 900px;
                          background-image: url(../../web/img/backgrounds/4.jpg); 
@@ -309,12 +312,13 @@ $this->title = 'My Yii Application';
                          background-size: initial;
                          background-attachment: fixed;
                          ">
+                    
                     <div class="container">
                         <div class="row">
                                 
                                 <!-- title-01 -->
-                                <div class="title-01" >
-                                    <h1 id="paral33" style="color: tomato; text-align: left;">Свяжитесь С Нами</h1>
+                                <div class="title-01">
+                                    <h1 id="paral33"  style="color: tomato; text-align: left;">Свяжитесь С Нами</h1>
                                     <h1 id="paral34" style="color: yellow; text-align: left;">по телефону</h1>
                                     <h1 id="paral35" style="color: greenyellow; text-align: left; font-size: 76px">+375-29-666-66-66</h1>
                                 </div><!-- End / title-01 -->
@@ -327,26 +331,37 @@ $this->title = 'My Yii Application';
                      <div class="form-01 consult-form js-consult-form__content" id="paral36" style="position: inherit;
     top: 200px;
     z-index: 99;">
-                            <h2 class="form-01__title">Give Us Your Feedback</h2>
-                            <form class="form-01__form">
+                            <h2 class="form-01__title">Отправьте нам сообщение</h2>
+                            <?php $form = \yii\widgets\ActiveForm::begin()?>
+                            <div class="form-01__form">
                                 <div class="form__item form__item--03">
-                                    <input type="text" name="name" placeholder="Your name"/>
+                                     <?= $form->field($model, 'name')->textarea(['class'=>'form-control','placeholder'=>'Ваше имя'])->label('Имя')?>
                                 </div>
                                 <div class="form__item form__item--03">
-                                    <input type="text" name="phone" placeholder="Your Email"/>
+                                    <?= $form->field($model, 'phone')->widget(\yii\widgets\MaskedInput::className(), ['mask' => '+375-99-999-99-99',])->label('Телефон')?>
                                 </div>
                                 <div class="form__item form__item--03">
-                                    <input type="email" name="email" placeholder="Your Email"/>
+                                     <?= $form->field($model, 'email')->textarea(['class'=>'form-control','placeholder'=>'Ваш Email'])->label('Email')?>
                                 </div>
                                 <div class="form__item">
-                                    <textarea rows="3" name="Your message" placeholder="Your message"></textarea>
+                                    <?= $form->field($model, 'your_message')->textarea(['class'=>'form-control','placeholder'=>'Ваше сообщение'])->label('Ваше сообщение')?>
+                                    
                                 </div>
-                                <div class="form__button"><a class="btn btn-primary btn-w180" href="#">send message</a>
-                                </div>
-                            </form>
+                                
+                                <button type="submit" class="btn send-btn">ОТПРАВИТЬ</button>
+                                
+                                
+                     </div>
+                             <?php \yii\widgets\ActiveForm::end();?>
+                             <?php if(Yii::$app->session->getFlash('req')):?>
+            <div class="alert alert-success" role="alert">
+                <?= Yii::$app->session->getFlash('req'); ?>
+            </div>
+        <?php endif;?>
+                            </div>
                         </div><!-- End / form-01 --> 
                         
-                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                         
                                 <script type="text/javascript" >
                                 
 $("#paral33").click(function(){
@@ -384,6 +399,9 @@ $("#paral33").click(function(){
        var pos1 = $( "#paral34" );
        var pos2 = $( "#paral35" );
        var pos3 = $( "#paral36" );
+        pos.offset({left:initX1})
+      pos1.offset({left:initX1})
+      pos2.offset({left:initX1})
       
       $(this).css('background-position','center ' + (-((ratio+300) * 20)) + 'px')
       if ((ratio < -18) && (ratio > -77)) {
@@ -393,18 +411,14 @@ $("#paral33").click(function(){
       pos3.offset({top:initY+(height/14)-(ratio*10)})
   }
       if (ratio >= -18) {
-      pos.offset({left:initX1})
-      pos1.offset({left:initX1})
-      pos2.offset({left:initX1})
+     
   }
-      document.getElementById("show").innerHTML = ratio;
-      document.getElementById("show1").innerHTML = scrolled;
+      
                }
   })
 })
-
+ 
                                     </script>
-                    </div>
                      <!-- form-01 -->
                         
                 </section>
@@ -481,26 +495,14 @@ $("#paral33").click(function(){
                 
             </div>
 <script type="text/javascript" >
-    function my_sb1() {
     
     
-    }
-    
-    function isInViewport1(node) {
-  var rect = node.getBoundingClientRect()
-  return (
-    (rect.height > 0 || rect.width > 0) &&
-    rect.bottom >= 0 &&
-    rect.right >= 0 &&
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-}
+   
 
      $(window).scroll(function() {
   
    $('.consult-background').each(function open (index, element) {
-    var visible1 = isInViewport1(this)
+    var visible1 = isInViewport(this)
     if(visible1) {
      document.getElementById("subar13").classList.remove("bar13");
     document.getElementById("subar13").classList.add("changebar13");
