@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -18,7 +19,10 @@ LtAppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Url::to(['/web/favicon.ico'])]);?>
+
+         
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Home</title>
         <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,10 +35,17 @@ LtAppAsset::register($this);
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
        
+            
+                
+               
+            
     </head>
     
     <body>
         <?php $this->beginBody() ?>
+       
+           
+        
         <div class="page-wrap" <?php if(isset($this->blocks['block1'])): ?>
     <?= $this->blocks['block1']; ?>
     
